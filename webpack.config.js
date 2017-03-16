@@ -5,6 +5,8 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
+    // @bug: 上传到服务器子目录的话，需要改为./dist/
+    // 但是调试的时候会出问题
     publicPath: './dist/',
     filename: 'build.js'
   },
