@@ -1,0 +1,84 @@
+{
+  "todayThinkings":[
+    {
+      "type": "idea",
+      "title": "这里可以输入一个有趣想法的简短描述哦～",
+      "time": 0,
+      "detail": "这里你就可以输入详细的描述了，可以之后再慢慢添加哦～",
+      "showDetail": false,
+      "editingTitle": false,
+      "editingDetail": false
+    },
+    {
+      "type": "obs",
+      "title": "这里可以输入一个有趣观察的简短描述哦～",
+      "time": 0,
+      "detail":"这里你就可以输入详细的描述了，可以之后再慢慢添加哦～",
+      "showDetail": false,
+      "editingTitle": false,
+      "editingDetail": false
+    },
+    {
+      "type": "qu",
+      "title": "这里可以输入一个有趣问题的简短描述哦～",
+      "time": 0,
+      "detail": "这里你就可以输入详细的描述了，可以之后再慢慢添加哦～",
+      "showDetail": false,
+      "editingTitle": false,
+      "editingDetail": false
+    }
+  ],
+  "historyThinkings": {
+    "2017-03-13": [
+      {
+        "type": "obs",
+        "title": "2017-03-13 历史数据 1",
+        "time": 1489353005000,
+        "detail": "这里你就可以输入详细的描述了，可以之后再慢慢添加哦～",
+        "showDetail": false,
+        "editingTitle": false,
+        "editingDetail": false
+      },
+      {
+        "type": "qu",
+        "title": "2017-03-13 历史数据 2",
+        "time": 1489352885000,
+        "detail": "这里你就可以输入详细的描述了，可以之后再慢慢添加哦～",
+        "showDetail": false,
+        "editingTitle": false,
+        "editingDetail": false
+      },
+      {
+        "type": "idea",
+        "title": "2017-03-13 历史数据 3",
+        "time": 1489352705000,
+        "detail": "这里你就可以输入详细的描述了，可以之后再慢慢添加哦～",
+        "showDetail": false,
+        "editingTitle": false,
+        "editingDetail": false
+      }
+    ],
+    "2017-03-12": [
+      {
+        "type": "qu",
+        "title": "2017-03-12 历史数据",
+        "time": 1489262644000,
+        "detail": "这里你就可以输入详细的描述了，可以之后再慢慢添加哦～",
+        "showDetail": false,
+        "editingTitle": false,
+        "editingDetail": false
+      }
+    ],
+    "2017-03-11": [
+      {
+        "type": "idea", 
+        "title": "2017-03-11 历史数据",
+        "time": 1489172583000,
+        "detail": "这里你就可以输入详细的描述了，可以之后再慢慢添加哦～",
+        "showDetail": false,
+        "editingTitle": false,
+        "editingDetail": false
+      }
+    ]  
+  }
+}
