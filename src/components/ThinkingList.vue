@@ -15,7 +15,7 @@
         
         <label @dblclick="editTitle(thinking)">{{ thinking.title }}</label>
         <textarea
-          v-model="thinking.title"
+          v-model.trim="thinking.title"
           v-focus="thinking.editingTitle"
           @blur="doneEditTitle(thinking)"
           @keyup.enter="doneEditTitle(thinking)"
@@ -38,7 +38,7 @@
         >
         <label @dblclick="editDetail(thinking)">{{ thinking.detail }}</label>
         <textarea
-          v-model="thinking.detail"
+          v-model.trim="thinking.detail"
           v-focus="thinking.editingDetail"
           @blur="doneEditDetail(thinking)"
           @keyup.enter="doneEditDetail(thinking)"
@@ -50,35 +50,6 @@
 </template>
 
 <script>
-var thinkingList = [
-  {
-    type: 'idea',
-    title: '这里可以输入一个有趣想法的简短描述哦～',
-    time: + new Date(),
-    detail: '这里你就可以输入详细的描述了，可以之后再慢慢添加哦～',
-    showDetail: false,
-    editingTitle: false,
-    editingDetail: false
-  },
-  {
-    type: 'obs',
-    title: '这里可以输入一个有趣观察的简短描述哦～',
-    time: + new Date(),
-    detail: '这里你就可以输入详细的描述了，可以之后再慢慢添加哦～',
-    showDetail: false,
-    editingTitle: false,
-    editingDetail: false
-  },
-  {
-    type: 'qu',
-    title: '这里可以输入一个有趣问题的简短描述哦～',
-    time: + new Date(),
-    detail: '这里你就可以输入详细的描述了，可以之后再慢慢添加哦～',
-    showDetail: false,
-    editingTitle: false,
-    editingDetail: false
-  }
-];
   
 export default {
 	data(){
@@ -87,8 +58,7 @@ export default {
 	props:{
 		thinkings: {
 			type: Array,
-			// required: true,
-			// default: thinkingList
+			required: true
 		}
 	},
   filters: {
@@ -122,8 +92,7 @@ export default {
       // 防止cancel后再执行一遍
       if(!thinking.editingTitle) return;
       thinking.editingTitle = false;
-      thinking.title = thinking.title.trim();
-      thinking.time = + new Date();
+      // thinking.time = + new Date();
       if(!thinking.title) {
         this.removeThinking(thinking);
       }
@@ -139,8 +108,7 @@ export default {
     doneEditDetail(thinking){
       if(!thinking.editingDetail) return;
       thinking.editingDetail = false;
-      thinking.detail = thinking.detail.trim();
-      thinking.time = + new Date();
+      // thinking.time = + new Date();
     },
     cancelEditDetail(thinking){
       thinking.detail = this.beforeEditCache;
@@ -161,16 +129,15 @@ export default {
 
 <style lang="scss" scoped>
 $focusColor: #F58120;
+
 .thinking-list {
-  padding-left: 30px;
-  margin-top: 50px;
 
   .thinking {
     margin-bottom: 30px;  
     transition: transform .3s ease-out;   
   }
   .thinking:hover {
-    transform: translateX(-25px);
+    transform: translateX(-28px);
 
     .delete {
       display: inline-block;
@@ -191,8 +158,8 @@ $focusColor: #F58120;
       width: 360px;
       margin-left: 18px;
       margin-right: 25px;
-      font-size: 16px;
-      line-height:1.5;
+      font-size: 18px;
+      line-height: 1.5;
     }
     textarea {
       display: none;
@@ -216,6 +183,7 @@ $focusColor: #F58120;
     }
 
     .time {
+      display: block;
       margin: 0 40px;
       color: #a2cc97;
     }
